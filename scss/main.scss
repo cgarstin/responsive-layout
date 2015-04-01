@@ -1,0 +1,167 @@
+$design-width: 1200px;
+$design-grid-ratio: .53;
+$hero-ratio: .56;
+$footer-ratio: .217;
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+  @media (min-width: $design-width) {
+    font-size: 12px;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+section, footer, header {
+  margin: 0 auto;
+}
+
+.icon--hamburger {
+  padding-left: 2em;
+  background: url(/images/icons/hamburger.png) 0 0 no-repeat;
+}
+
+.text--allcaps {
+  text-transform: uppercase;
+}
+
+.homepage header {
+  background: url(/images/hero/canoe.jpg) center / cover no-repeat;
+  max-height: #{$hero-ratio * 100}vw;
+  height: $design-width * $hero-ratio;
+  max-width: $design-width;
+
+  @media ( min-width: $design-width ) {
+    max-height: $design-width * $hero-ratio;
+  }
+}
+
+.homepage footer {
+  background: url(/images/footer/swimmer.jpg) center / cover no-repeat;
+  max-height: #{$footer-ratio * 100}vw;
+  height: $design-width * $footer-ratio;
+  max-width: $design-width;
+
+  @media ( min-width: $design-width ) {
+    max-height: $design-width * $footer-ratio;
+  }
+}
+
+.homepage .grid-row {
+  width: $design-width;;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .grid-item {
+    height: 180px;
+    width: 100%;
+    background-color: #0c0f27;
+    color: #dbdbdb;
+    &:nth-child(2) {
+      background-color: #101946;
+    }
+  }
+  @media ( min-width: $design-width ) {
+    .grid-item {
+      width: #{ ( 100% / 3 ) };
+    }
+  }
+}
+
+.column-grid {
+  width: 100%;
+  max-width: $design-width;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.column-grid--item {
+  width: #{ ( 100% / 3 ) };
+  height: #{ ( 100% / 3 ) };
+  max-width: 100%;
+  max-height: 100%;
+  flex: #{ ( 100% / 3 ) };
+}
+
+.column-grid--item--double-height {
+  height: #{ ( 100% / 3 ) * 2};
+  flex: #{ ( 100% / 3 ) * 2};
+}
+
+.homepage .column-grid {
+  height: $design-width * $design-grid-ratio;
+  max-height: $design-width * $design-grid-ratio;
+}
+
+.homepage-portfolio {
+  height: 100%;
+  background-color: #0c0f27;
+  color: #dbdbdb;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    padding: 35px;
+  }
+
+  a {
+    color: inherit;
+    text-align: left;
+    display: inline-block;
+  }
+  & > div {
+    height: 100%;
+    max-height: 50%;
+  }
+}
+
+@media (max-width: $design-width) {
+  .homepage .column-grid {
+    max-height: #{$design-grid-ratio * 100}vw;
+    &--item--primary {
+      width: #{ ( 100% / 3 ) * 2 };
+      margin-left: -#{ ( 100% / 3 ) };
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .homepage {
+    .column-grid--item:not(.column-grid--item--primary) {
+      display: none;
+    }
+    .column-grid--item--primary {
+      width: 100%;
+      height: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+@each $image in (nyc, sanfran, coast, london, typewriter, bear) {
+  .column-grid--item--#{$image} {
+    background: url(/images/homepage/#{$image}.jpg) center / cover no-repeat;
+  }
+}

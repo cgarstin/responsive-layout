@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  body, html {
+    font-size: 12px;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+section, footer, header {
+  margin: 0 auto;
+}
+
+.icon--hamburger {
+  padding-left: 2em;
+  background: url(/images/icons/hamburger.png) 0 0 no-repeat;
+}
+
+.text--allcaps {
+  text-transform: uppercase;
+}
+
+.homepage header {
+  background: url(/images/hero/canoe.jpg) center/cover no-repeat;
+  max-height: 56.0vw;
+  height: 672.0px;
+  max-width: 1200px;
+}
+@media (min-width: 1200px) {
+  .homepage header {
+    max-height: 672.0px;
+  }
+}
+
+.homepage footer {
+  background: url(/images/footer/swimmer.jpg) center/cover no-repeat;
+  max-height: 21.7vw;
+  height: 260.4px;
+  max-width: 1200px;
+}
+@media (min-width: 1200px) {
+  .homepage footer {
+    max-height: 260.4px;
+  }
+}
+
+.homepage .grid-row {
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.homepage .grid-row .grid-item {
+  height: 180px;
+  width: 100%;
+  background-color: #0c0f27;
+  color: #dbdbdb;
+}
+.homepage .grid-row .grid-item:nth-child(2) {
+  background-color: #101946;
+}
+@media (min-width: 1200px) {
+  .homepage .grid-row .grid-item {
+    width: 33.33333%;
+  }
+}
+
+.column-grid {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.column-grid--item {
+  width: 33.33333%;
+  height: 33.33333%;
+  max-width: 100%;
+  max-height: 100%;
+  flex: 33.33333%;
+}
+
+.column-grid--item--double-height {
+  height: 66.66667%;
+  flex: 66.66667%;
+}
+
+.homepage .column-grid {
+  height: 636px;
+  max-height: 636px;
+}
+
+.homepage-portfolio {
+  height: 100%;
+  background-color: #0c0f27;
+  color: #dbdbdb;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .homepage-portfolio {
+    padding: 35px;
+  }
+}
+.homepage-portfolio a {
+  color: inherit;
+  text-align: left;
+  display: inline-block;
+}
+.homepage-portfolio > div {
+  height: 100%;
+  max-height: 50%;
+}
+
+@media (max-width: 1200px) {
+  .homepage .column-grid {
+    max-height: 53vw;
+  }
+  .homepage .column-grid--item--primary {
+    width: 66.66667%;
+    margin-left: -33.33333%;
+  }
+}
+@media (max-width: 580px) {
+  .homepage .column-grid--item:not(.column-grid--item--primary) {
+    display: none;
+  }
+  .homepage .column-grid--item--primary {
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+}
+.column-grid--item--nyc {
+  background: url(/images/homepage/nyc.jpg) center/cover no-repeat;
+}
+
+.column-grid--item--sanfran {
+  background: url(/images/homepage/sanfran.jpg) center/cover no-repeat;
+}
+
+.column-grid--item--coast {
+  background: url(/images/homepage/coast.jpg) center/cover no-repeat;
+}
+
+.column-grid--item--london {
+  background: url(/images/homepage/london.jpg) center/cover no-repeat;
+}
+
+.column-grid--item--typewriter {
+  background: url(/images/homepage/typewriter.jpg) center/cover no-repeat;
+}
+
+.column-grid--item--bear {
+  background: url(/images/homepage/bear.jpg) center/cover no-repeat;
+}
