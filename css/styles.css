@@ -9,6 +9,7 @@ body, html {
   padding: 0;
   font-family: helvetica, arial, sans-serif;
   font-size: 14px;
+  background-color: #0c0f27;
 }
 @media (min-width: 1200px) {
   body, html {
@@ -77,8 +78,52 @@ section, footer, header {
   background-color: #0c0f27;
   color: #dbdbdb;
 }
+.homepage .grid-row .grid-item:hover {
+  background-color: #12163a;
+  transition: background-color .2s;
+}
 .homepage .grid-row .grid-item:nth-child(2) {
   background-color: #101946;
+}
+.homepage .grid-row .grid-item:nth-child(2):hover {
+  background-color: #15205b;
+}
+.homepage .grid-row--icons .grid-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.homepage .grid-row--icons .grid-item:hover p:after {
+  transform: translateY(4px);
+}
+.homepage .grid-row--icons p {
+  width: 100%;
+  position: relative;
+}
+.homepage .grid-row--icons p:before, .homepage .grid-row--icons p:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+}
+.homepage .grid-row--icons p:before {
+  height: 75px;
+  width: 75px;
+}
+.homepage .grid-row--icons p:after {
+  background: url(/images/icons/down-arrow.png) center no-repeat;
+  margin-top: 1em;
+  height: 20px;
+  transition: transform .2s;
+}
+.homepage .grid-row--icons .grid-item:nth-child(1) > p:before {
+  background: url(/images/icons/submarine.png) center no-repeat;
+}
+.homepage .grid-row--icons .grid-item:nth-child(2) > p:before {
+  background: url(/images/icons/wheel.png) center no-repeat;
+}
+.homepage .grid-row--icons .grid-item:nth-child(3) > p:before {
+  background: url(/images/icons/dolphin.png) center no-repeat;
 }
 @media (min-width: 1200px) {
   .homepage .grid-row .grid-item {
@@ -135,6 +180,10 @@ section, footer, header {
 .homepage-portfolio > div {
   height: 100%;
   max-height: 50%;
+}
+
+.homepage .column-grid--item--primary {
+  transition: all .1s;
 }
 
 @media (max-width: 1200px) {

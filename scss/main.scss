@@ -14,6 +14,7 @@ body, html {
   padding: 0;
   font-family: helvetica, arial, sans-serif;
   font-size: 14px;
+  background-color: #0c0f27;
   @media (min-width: $design-width) {
     font-size: 12px;
   }
@@ -76,10 +77,67 @@ section, footer, header {
     width: 100%;
     background-color: #0c0f27;
     color: #dbdbdb;
+    &:hover {
+      background-color: lighten(#0c0f27, 5%);
+      transition: background-color .2s;
+    }
     &:nth-child(2) {
       background-color: #101946;
+      &:hover {
+        background-color: lighten(#101946, 5%);
+      }
     }
   }
+
+  &--icons {
+    .grid-item {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: uppercase;
+      &:hover p:after {
+        transform: translateY(4px);
+      }
+    }
+
+    p {
+      width: 100%;
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+      }
+      &:before {
+        height: 75px;
+        width: 75px;
+      }
+      &:after {
+        background: url(/images/icons/down-arrow.png) center no-repeat;
+        margin-top: 1em;
+        height: 20px;
+        transition: transform .2s;
+      }
+    }
+
+    .grid-item:nth-child(1) > p {
+      &:before {
+        background: url(/images/icons/submarine.png) center no-repeat;
+      }
+    }
+    .grid-item:nth-child(2) > p {
+      &:before {
+        background: url(/images/icons/wheel.png) center no-repeat;
+      }
+    }
+    .grid-item:nth-child(3) > p {
+      &:before {
+        background: url(/images/icons/dolphin.png) center no-repeat;
+      }
+    }
+  }
+
   @media ( min-width: $design-width ) {
     .grid-item {
       width: #{ ( 100% / 3 ) };
@@ -131,10 +189,15 @@ section, footer, header {
     text-align: left;
     display: inline-block;
   }
+
   & > div {
     height: 100%;
     max-height: 50%;
   }
+}
+
+.homepage .column-grid--item--primary {
+  transition: all .1s;
 }
 
 @media (max-width: $design-width) {
@@ -152,6 +215,7 @@ section, footer, header {
     .column-grid--item:not(.column-grid--item--primary) {
       display: none;
     }
+
     .column-grid--item--primary {
       width: 100%;
       height: 100%;
