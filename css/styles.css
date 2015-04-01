@@ -35,7 +35,7 @@ section, footer, header {
 
 .icon--hamburger {
   padding-left: 2em;
-  background: url(/images/icons/hamburger.png) 0 0 no-repeat;
+  background: url(/responsive-layout/images/icons/hamburger.png) 0 0 no-repeat;
 }
 
 .text--allcaps {
@@ -43,7 +43,7 @@ section, footer, header {
 }
 
 .homepage header {
-  background: url(/images/hero/canoe.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/hero/canoe.jpg) center/cover no-repeat;
   max-height: 56.0vw;
   height: 672.0px;
   max-width: 1200px;
@@ -55,7 +55,7 @@ section, footer, header {
 }
 
 .homepage footer {
-  background: url(/images/footer/swimmer.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/footer/swimmer.jpg) center/cover no-repeat;
   max-height: 21.7vw;
   height: 260.4px;
   max-width: 1200px;
@@ -111,19 +111,19 @@ section, footer, header {
   width: 75px;
 }
 .homepage .grid-row--icons p:after {
-  background: url(/images/icons/down-arrow.png) center no-repeat;
+  background: url(/responsive-layout/images/icons/down-arrow.png) center no-repeat;
   margin-top: 1em;
   height: 20px;
   transition: transform .2s;
 }
 .homepage .grid-row--icons .grid-item:nth-child(1) > p:before {
-  background: url(/images/icons/submarine.png) center no-repeat;
+  background: url(/responsive-layout/images/icons/submarine.png) center no-repeat;
 }
 .homepage .grid-row--icons .grid-item:nth-child(2) > p:before {
-  background: url(/images/icons/wheel.png) center no-repeat;
+  background: url(/responsive-layout/images/icons/wheel.png) center no-repeat;
 }
 .homepage .grid-row--icons .grid-item:nth-child(3) > p:before {
-  background: url(/images/icons/dolphin.png) center no-repeat;
+  background: url(/responsive-layout/images/icons/dolphin.png) center no-repeat;
 }
 @media (min-width: 1200px) {
   .homepage .grid-row .grid-item {
@@ -206,25 +206,25 @@ section, footer, header {
   }
 }
 .column-grid--item--nyc {
-  background: url(/images/homepage/nyc.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/nyc.jpg) center/cover no-repeat;
 }
 
 .column-grid--item--sanfran {
-  background: url(/images/homepage/sanfran.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/sanfran.jpg) center/cover no-repeat;
 }
 
 .column-grid--item--coast {
-  background: url(/images/homepage/coast.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/coast.jpg) center/cover no-repeat;
 }
 
 .column-grid--item--london {
-  background: url(/images/homepage/london.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/london.jpg) center/cover no-repeat;
 }
 
 .column-grid--item--typewriter {
-  background: url(/images/homepage/typewriter.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/typewriter.jpg) center/cover no-repeat;
 }
 
 .column-grid--item--bear {
-  background: url(/images/homepage/bear.jpg) center/cover no-repeat;
+  background: url(/responsive-layout/images/homepage/bear.jpg) center/cover no-repeat;
 }

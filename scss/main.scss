@@ -38,7 +38,7 @@ section, footer, header {
 
 .icon--hamburger {
   padding-left: 2em;
-  background: url(/images/icons/hamburger.png) 0 0 no-repeat;
+  background: url(/responsive-layout/images/icons/hamburger.png) 0 0 no-repeat;
 }
 
 .text--allcaps {
@@ -46,7 +46,7 @@ section, footer, header {
 }
 
 .homepage header {
-  background: url(/images/hero/canoe.jpg) center / cover no-repeat;
+  background: url(/responsive-layout/images/hero/canoe.jpg) center / cover no-repeat;
   max-height: #{$hero-ratio * 100}vw;
   height: $design-width * $hero-ratio;
   max-width: $design-width;
@@ -57,7 +57,7 @@ section, footer, header {
 }
 
 .homepage footer {
-  background: url(/images/footer/swimmer.jpg) center / cover no-repeat;
+  background: url(/responsive-layout/images/footer/swimmer.jpg) center / cover no-repeat;
   max-height: #{$footer-ratio * 100}vw;
   height: $design-width * $footer-ratio;
   max-width: $design-width;
@@ -114,7 +114,7 @@ section, footer, header {
         width: 75px;
       }
       &:after {
-        background: url(/images/icons/down-arrow.png) center no-repeat;
+        background: url(/responsive-layout/images/icons/down-arrow.png) center no-repeat;
         margin-top: 1em;
         height: 20px;
         transition: transform .2s;
@@ -123,17 +123,17 @@ section, footer, header {
 
     .grid-item:nth-child(1) > p {
       &:before {
-        background: url(/images/icons/submarine.png) center no-repeat;
+        background: url(/responsive-layout/images/icons/submarine.png) center no-repeat;
       }
     }
     .grid-item:nth-child(2) > p {
       &:before {
-        background: url(/images/icons/wheel.png) center no-repeat;
+        background: url(/responsive-layout/images/icons/wheel.png) center no-repeat;
       }
     }
     .grid-item:nth-child(3) > p {
       &:before {
-        background: url(/images/icons/dolphin.png) center no-repeat;
+        background: url(/responsive-layout/images/icons/dolphin.png) center no-repeat;
       }
     }
   }
@@ -226,6 +226,6 @@ section, footer, header {
 
 @each $image in (nyc, sanfran, coast, london, typewriter, bear) {
   .column-grid--item--#{$image} {
-    background: url(/images/homepage/#{$image}.jpg) center / cover no-repeat;
+    background: url(/responsive-layout/images/homepage/#{$image}.jpg) center / cover no-repeat;
   }
 }
